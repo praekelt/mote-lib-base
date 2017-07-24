@@ -1,0 +1,5 @@
+button:
+  label:
+    id: self.website.atoms.label
+    data:
+        value: Button lorem ipsum dolor
