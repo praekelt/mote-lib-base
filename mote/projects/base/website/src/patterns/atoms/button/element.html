@@ -1,3 +1,6 @@
 {% load mote_tags %}
 
-<button>{% render_element data.label.id data=data.label.data %}</button>
+<button>
+    {% render icon %}
+    {% render label %}
+</button>

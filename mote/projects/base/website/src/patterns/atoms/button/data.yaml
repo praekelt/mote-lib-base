@@ -1,5 +1,7 @@
-button:
-  label:
-    id: self.website.atoms.label
-    data:
-        value: Button lorem ipsum dolor
+label:
+  id: self.website.atoms.label
+  text: Button label text
+icon:
+  id: self.website.atoms.icon
+  src: /foo/button-icon.png
+  alt: Button icon alt
