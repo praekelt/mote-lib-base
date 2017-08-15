@@ -1,0 +1,53 @@
+<picture>
+
+     <!--[if IE 9]><video style="display: none;"><![endif]-->
+
+    {% if lazy %}
+    {% for source in sources %}
+        <source data-srcset="
+        {% for di in source.srcsets %}
+            {{ di.url }} {{ di.wh }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+        "
+        {% if source.breakpoint %}
+            media="(min-width: {{ source.breakpoint }}px)"
+        {% endif %}
+        />
+    {% endfor %}
+    {% endif %}
+
+    <!--[if IE 9]></video><![endif]-->
+
+    {% if lazy %}
+        <img class="lazyautosizes lazyloaded"
+             srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-sizes="auto"
+             alt="{% if alt %}{{ alt }}{% else %}Responsive image{% endif %}"
+         />
+    {% else %}
+        <img src="{{ src }}"
+            {% if alt %}alt="{{ alt }}"{% endif %}
+            {% if srcsets %}
+            srcset="
+            {% for srcset in srcsets %}
+                {{ srcset.url }} {{ srcset.wh }}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+            "
+        {% endif %}
+        />
+    {% endif %}
+
+</picture>
+
+<noscript>
+    <img src="{{ src }}"
+        {% if alt %}alt="{{ alt }}"{% endif %}
+        {% if srcsets %}
+        srcset="
+        {% for srcset in srcsets %}
+            {{ srcset.url }} {{ srcset.wh }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+        "
+        {% endif %}
+    />
+</noscript>
