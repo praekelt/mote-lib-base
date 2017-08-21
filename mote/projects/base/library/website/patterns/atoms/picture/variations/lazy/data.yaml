@@ -1,0 +1,15 @@
+lazy: true
+alt: Picture
+sources:
+    - srcsets:
+        - url: foo-320x240.png
+          wh: 320x240
+        - url: foo-640x480.png
+          wh: 640x480
+      breakpoint: 1280
+    - srcsets:
+        - url: bar-320x240.png
+          wh: 320x240
+        - url: bar-640x480.png
+          wh: 640x480
+      breakpoint: 1920
