@@ -1,5 +1,7 @@
-label:
-    id: self.website.atoms.label
-    text: Anchor label text
+children:
+    -
+        label:
+            id: self.website.atoms.label
+            text: Anchor label text
 attrs:
     href: #

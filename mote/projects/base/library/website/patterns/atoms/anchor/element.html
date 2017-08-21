@@ -1,5 +1,7 @@
 {% load mote_tags %}
 
 <a {% for k, v in attrs.items %} {{ k }}="{{ v }}" {% endfor %}>
-    {% render label %}
+    {% for child in children %}
+        {% render child %}
+    {% endfor %}
 </a>
