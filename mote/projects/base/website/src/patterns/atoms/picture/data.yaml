@@ -1,8 +1,0 @@
-lazy: false
-src: foo.png
-alt: Picture
-srcsets:
-    - url: foo-320x240.png
-      wh: 320x240
-    - url: foo-640x480.png
-      wh: 640x480

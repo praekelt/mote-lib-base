@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name="mote.lib.base",
+    name="mote-lib-base",
     description="The base set of patterns for Mote",
     long_description = open("README.rst", "r").read() + open("AUTHORS.rst", "r").read() + open("CHANGELOG.rst", "r").read(),
     version="0.1",
     author="Praekelt Consulting",
     author_email="dev@praekelt.com",
     license="BSD",
-    url="http://github.com/praekelt/mote.lib.base",
+    url="http://github.com/praekelt/mote-lib-base",
     packages = find_packages(),
     dependency_links = [
     ],
