@@ -1,3 +1,4 @@
+tag: a
 children:
     label:
         id: self.website.atoms.label
