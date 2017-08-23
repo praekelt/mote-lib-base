@@ -1,5 +1,5 @@
 attrs:
-    data-attr: ''
+    data-foo: ''
 sources:
     - srcsets:
         -
