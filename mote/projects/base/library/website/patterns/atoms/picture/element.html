@@ -1,53 +1,23 @@
-<picture>
+{% load mote_tags %}
 
-     <!--[if IE 9]><video style="display: none;"><![endif]-->
-
-    {% if lazy %}
+<picture
+    {% if classes %}
+        class="{% for class in classes %} {{ class }} {% endfor %}"
+    {% endif %}
+    >
+    <!--[if IE 9><video style="display: none;"><![endif]-->
     {% for source in sources %}
-        <source data-srcset="
-        {% for di in source.srcsets %}
-            {{ di.url }} {{ di.wh }}{% if not forloop.last %}, {% endif %}
-        {% endfor %}
-        "
-        {% if source.breakpoint %}
-            media="(min-width: {{ source.breakpoint }}px)"
-        {% endif %}
+        <source
+            srcset="
+                {% for di in source.srcsets %}
+                    {{ di.src }} {{ di.dimensions }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            "
+            {% for k, v in source.attrs.items %}
+                {{ k }}="{{ v }}"
+            {% endfor %}
         />
     {% endfor %}
-    {% endif %}
-
     <!--[if IE 9]></video><![endif]-->
-
-    {% if lazy %}
-        <img class="lazyautosizes lazyloaded"
-             srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-             data-sizes="auto"
-             alt="{% if alt %}{{ alt }}{% else %}Responsive image{% endif %}"
-         />
-    {% else %}
-        <img src="{{ src }}"
-            {% if alt %}alt="{{ alt }}"{% endif %}
-            {% if srcsets %}
-            srcset="
-            {% for srcset in srcsets %}
-                {{ srcset.url }} {{ srcset.wh }}{% if not forloop.last %},{% endif %}
-            {% endfor %}
-            "
-        {% endif %}
-        />
-    {% endif %}
-
+    {% render "self.website.atoms.inline" img %}
 </picture>
-
-<noscript>
-    <img src="{{ src }}"
-        {% if alt %}alt="{{ alt }}"{% endif %}
-        {% if srcsets %}
-        srcset="
-        {% for srcset in srcsets %}
-            {{ srcset.url }} {{ srcset.wh }}{% if not forloop.last %}, {% endif %}
-        {% endfor %}
-        "
-        {% endif %}
-    />
-</noscript>

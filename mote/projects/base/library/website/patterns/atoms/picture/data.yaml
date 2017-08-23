@@ -1,8 +1,17 @@
-lazy: false
-src: foo.png
-alt: Picture
-srcsets:
-    - url: foo-320x240.png
-      wh: 320x240
-    - url: foo-640x480.png
-      wh: 640x480
+attrs:
+    data-attr: ''
+sources:
+    - srcsets:
+        -
+            src: foo@200.png
+            dimensions: 200w 100h
+    - srcsets:
+        -
+            src: foo@400.png
+            dimensions: 400w 200h
+img:
+    tag: img
+    attrs:
+        src: foo.png
+    classes:
+        - ''
