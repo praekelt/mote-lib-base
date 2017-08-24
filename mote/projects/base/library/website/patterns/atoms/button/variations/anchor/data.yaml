@@ -1,1 +1,7 @@
-href: ''
+tag: a
+attrs:
+    href: "#"
+children:
+    label:
+      id: self.website.atoms.label
+      text: Button label text

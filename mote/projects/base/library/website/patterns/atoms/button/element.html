@@ -1,15 +1,3 @@
 {% load mote_tags %}
 
-{% if href %}
-    <a href="{{ href }}" class="Button
-            {% for class in classes %} {{ class }} {% endfor %}"
-            {% for k, v in attrs %} {{ k }}="{{ v }}" {% endfor %}>
-        <span class="Button-text">{{ text }}</span>
-    </a>
-{% else %}
-    <button class="Button
-            {% for class in classes %} {{ class }} {% endfor %}"
-            {% for k, v in attrs %} {{ k }}="{{ v }}" {% endfor %}>
-        <span class="Button-text">{{ text }}</span>
-    </button>
-{% endif %}
+{% render "self.website.atoms.nested" data %}
