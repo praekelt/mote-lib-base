@@ -4,4 +4,4 @@ attrs:
 children:
     label:
       id: self.website.atoms.label
-      text: Button label text
+      text: Button anchor label text
