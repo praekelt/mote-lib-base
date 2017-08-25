@@ -10,7 +10,7 @@
         <source
             srcset="
                 {% for di in source.srcsets %}
-                    {{ di.srcset.src }} {{ di.srcset.dimensions }}{% if not forloop.last %}, {% endif %}
+                    {{ di.src }} {{ di.dimensions }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             "
             {% for k, v in source.attrs.items %}

@@ -3,22 +3,18 @@ attrs:
 sources:
     - srcsets:
         -
-            srcset:
-                src: foo@200.png
-                dimensions: 200w 100h
+            src: foo@200.png
+            dimensions: 200w 100h
         -
-            srcset:
-                src: foo@200.webp
-                dimensions: 200w 100h
+            src: foo@200.webp
+            dimensions: 200w 100h
     - srcsets:
         -
-            srcset:
-                src: foo@400.png
-                dimensions: 400w 200h
+            src: foo@400.png
+            dimensions: 400w 200h
         -
-            srcset:
-                src: foo@400.webp
-                dimensions: 400w 200h
+            src: foo@400.webp
+            dimensions: 400w 200h
 img:
     tag: img
     attrs:
