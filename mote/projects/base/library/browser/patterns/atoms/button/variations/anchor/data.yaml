@@ -3,5 +3,5 @@ attrs:
     href: "#"
 children:
     label:
-      id: self.website.atoms.label
+      id: self.browser.atoms.label
       text: Button anchor label text
