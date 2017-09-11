@@ -1,10 +1,4 @@
-<img
-    {% if classes %}
-        class="{% for class in classes %} {{ class }} {% endfor %}"
-    {% endif %}
-
-    src="{{ src }}"
-
+<img {% if classes %}class="{% for v in classes.values %}{{ v }} {% endfor %}"{% endif %}
     {% if srcset %}
         srcset="
             {% for di in srcset %}

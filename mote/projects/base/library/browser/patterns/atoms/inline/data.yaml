@@ -1,5 +1,5 @@
 tag: tag
-attrs:
-    data-foo: ""
-classes:
-    - ""
+# attrs:
+#    data-foo: ""
+# classes:
+#    primary: myclass

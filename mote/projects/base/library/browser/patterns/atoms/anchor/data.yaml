@@ -1,7 +1,7 @@
 tag: a
 children:
-    label:
-        id: self.browser.atoms.label
-        text: Anchor label text one
+    text:
+        id: self.browser.atoms.text
+        value: Anchor text one
 attrs:
     href: "#"

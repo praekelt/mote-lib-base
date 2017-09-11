@@ -2,7 +2,7 @@
 
 <picture
     {% if classes %}
-        class="{% for class in classes %} {{ class }} {% endfor %}"
+        class="{% for v in classes.values %}{{ v }} {% endfor %}"
     {% endif %}
     >
     <!--[if IE 9><video style="display: none;"><![endif]-->

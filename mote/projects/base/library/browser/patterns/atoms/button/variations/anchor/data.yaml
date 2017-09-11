@@ -2,6 +2,6 @@ tag: a
 attrs:
     href: "#"
 children:
-    label:
-      id: self.browser.atoms.label
-      text: Button anchor label text
+    text:
+        id: self.browser.atoms.text
+        value: Button anchor text

@@ -1,3 +1,2 @@
-src: foo.png
 attrs:
-    alt: ''
+    src: foo.png
