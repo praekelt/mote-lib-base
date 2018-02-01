@@ -1,7 +1,7 @@
 tag: tag
 children:
     child:
-        id: self.browser.atoms.null
+        id: self.browser.meta.null
 
 # attrs:
 #    data-foo: ""

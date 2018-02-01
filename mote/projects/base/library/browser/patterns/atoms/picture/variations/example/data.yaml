@@ -1,0 +1,23 @@
+sources:
+    - srcset:
+        attrs:
+            type: 'image/webp'
+            media: '(min-width: 500px) and (max-width: 1000px)'
+        images:
+            -
+                src: foo@200.webp
+                dimensions: 200w 100h
+            -
+                src: foo@400.webp
+                dimensions: 400w 200h
+    - srcset:
+        images:
+            -
+                src: foo@200.png
+                dimensions: 200w 100h
+            -
+                src: foo@400.png
+                dimensions: 400w 200h
+img:
+    attrs:
+        src: foo@200.png

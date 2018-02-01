@@ -4,20 +4,23 @@
     {% if classes %}
         class="{% for v in classes.values %}{{ v }} {% endfor %}"
     {% endif %}
+    {% for k, v in attrs.items %}
+        {{ k }}="{{ v }}"
+    {% endfor %}
     >
     <!--[if IE 9><video style="display: none;"><![endif]-->
     {% for source in sources %}
         <source
             srcset="
-                {% for di in source.srcsets %}
+                {% for di in source.srcset.images %}
                     {{ di.src }} {{ di.dimensions }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             "
-            {% for k, v in source.attrs.items %}
+            {% for k, v in source.srcset.attrs.items %}
                 {{ k }}="{{ v }}"
             {% endfor %}
         />
     {% endfor %}
     <!--[if IE 9]></video><![endif]-->
-    {% render "self.browser.atoms.inline" img %}
+    {% render "self.browser.atoms.image" img %}
 </picture>

@@ -1,0 +1,3 @@
+title: 'Null'
+description: This atom returns nothing. It is a placeholder pattern for when we need to have the ability to compose patterns with data.
+hidden: true
