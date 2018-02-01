@@ -5,19 +5,19 @@ sources:
             media: '(min-width: 500px) and (max-width: 1000px)'
         images:
             -
-                src: foo@200.webp
+                src: http://www.placehold.it/200x100
                 dimensions: 200w 100h
             -
-                src: foo@400.webp
+                src: http://www.placehold.it/400x200
                 dimensions: 400w 200h
     - srcset:
         images:
             -
-                src: foo@200.png
+                src: http://www.placehold.it/200x100
                 dimensions: 200w 100h
             -
-                src: foo@400.png
+                src: http://www.placehold.it/400x200
                 dimensions: 400w 200h
 img:
     attrs:
-        src: foo@200.png
+        src: http://www.placehold.it/100x50
