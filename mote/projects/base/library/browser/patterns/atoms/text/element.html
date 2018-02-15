@@ -1,0 +1,7 @@
+{% load mote_tags %}
+
+<span
+    {% if classes %}class="{% for v in classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
+    {% for k, v in attrs.items %}{{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+    {{ value }}
+</span>

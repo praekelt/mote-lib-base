@@ -3,7 +3,7 @@
 <select>
     {% for option in options %}
         <option value="{{ option.value }}">
-            {% render option.label %}
+            {{ option.text }}
         </option>
     {% endfor %}
 </select>
