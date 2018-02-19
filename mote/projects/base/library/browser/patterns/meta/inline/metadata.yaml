@@ -1,3 +1,0 @@
-title: Inline
-description: This is a generic and purely functional atom which we use to offload rendering to for inline elements.
-hidden: true

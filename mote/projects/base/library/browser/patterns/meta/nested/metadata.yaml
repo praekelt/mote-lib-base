@@ -1,3 +1,0 @@
-title: Nested
-description: This atom is a generic functional pattern which we use to offload rendering elements which can nest children.
-hidden: true
