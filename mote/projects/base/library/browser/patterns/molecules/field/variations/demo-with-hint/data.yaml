@@ -1,0 +1,15 @@
+# <div> wrapping the input
+input:
+    children:
+        # <input> config
+        input:
+            attrs:
+                aria-describedby: form-field-example-hint
+
+# hint text config
+hint:
+    classes:
+        element: Field-hint
+    attrs:
+        id: form-field-example-hint
+    value: Hint

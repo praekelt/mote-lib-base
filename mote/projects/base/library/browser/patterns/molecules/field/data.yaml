@@ -1,0 +1,33 @@
+# Classes for the top-level div
+classes:
+    block: Field
+
+# <label> config
+label:
+    classes:
+        element: Field-label
+    attrs:
+        id: form-field-example-label
+        for: form-field-example
+
+# <div> wrapping the input
+input:
+    tag: div
+    classes:
+        element: Field-inputWrapper
+    children:
+        # <input> config
+        input:
+            id: self.browser.atoms.input
+            classes:
+                element: Field-input
+            attrs:
+                id: form-field-example
+
+hint:
+    classes:
+        element: Field-hint
+
+message:
+    classes:
+        element: Field-message

@@ -1,0 +1,14 @@
+# <div> wrapping the input
+input:
+    children:
+        # <input> config
+        input:
+            attrs:
+                aria-describedby: form-field-example-message
+
+message:
+    classes:
+        element: Field-message
+    attrs:
+        id: form-field-example-message
+    value: Validation message
