@@ -8,8 +8,6 @@ input:
 
 # hint text config
 hint:
-    classes:
-        element: Field-hint
     attrs:
         id: form-field-example-hint
     value: Hint
