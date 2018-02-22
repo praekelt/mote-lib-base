@@ -3,7 +3,7 @@
 <div {% if classes %}class="{% for class in classes.values %}{{ class }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
      {% for k, v in attrs.items %}{{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
     {% render "self.browser.atoms.label" label %}
-    {% render "self.browser.atoms.nested" input %}
+    {% render "self.browser.atoms.nested" item %}
     {% if hint.value %}
         {% render "self.browser.atoms.text" hint %}
     {% endif %}

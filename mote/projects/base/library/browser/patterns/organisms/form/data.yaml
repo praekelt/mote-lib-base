@@ -1,0 +1,8 @@
+tag: form
+classes:
+    block: Form
+
+attrs:
+    action: post
+
+

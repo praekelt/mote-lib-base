@@ -1,0 +1,14 @@
+tag: fieldset
+children:
+    legend:
+        id: self.browser.atoms.text
+        tag: legend
+        value: Fieldset Title
+    items:
+        tag: div
+        id: self.browser.atoms.nested.list
+        #children:
+            #-
+                #id: self.browser.molecules.field
+            #-
+                #id: self.browser.molecules.field

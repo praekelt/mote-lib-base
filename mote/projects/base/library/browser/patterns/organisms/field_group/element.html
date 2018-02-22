@@ -1,0 +1,17 @@
+{% load mote_tags %}
+
+{% render "self.browser.atoms.nested" data %}
+
+{% comment %}
+<fieldset class="FieldGroup{% for class in classes.values %} {{ class }}{% endfor %}"
+     {% for k, v in attrs.items %}{{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+    {% if legend.value %}
+        {% render "self.browser.atoms.text" legend %}
+    {% endif %}
+    {% for item in items %}
+        <div class="FieldGroup-item">
+            {% render item %}
+        </div>
+    {% endfor %}
+</fieldset>
+{% endcomment %}
