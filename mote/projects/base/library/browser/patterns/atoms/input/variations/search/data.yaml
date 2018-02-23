@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typeSearch
+
 attrs:
     type: search

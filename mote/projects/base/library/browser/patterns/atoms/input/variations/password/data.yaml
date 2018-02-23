@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typePassword
+
 attrs:
     type: password

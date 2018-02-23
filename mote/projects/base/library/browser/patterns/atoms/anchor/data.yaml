@@ -1,4 +1,7 @@
 tag: a
+classes:
+    block: Hyperlink
+
 children:
     text:
         id: self.browser.atoms.text

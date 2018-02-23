@@ -1,12 +1,24 @@
 tag: fieldset
+
+classes:
+    block: FieldGroup
+
 children:
     legend:
-        id: self.browser.atoms.text
-        tag: legend
-        value: Fieldset Title
+        id: self.browser.atoms.text.legend
+        classes:
+            element: FieldGroup-title
+
     items:
-        tag: div
         id: self.browser.atoms.nested.list
+        tag: div
+        classes:
+            element: FieldGroup-fields
+
+        wrapper:
+            tag: div
+            classes:
+                element: FieldGroup-field
         #children:
             #-
                 #id: self.browser.molecules.field

@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typeRadio
+
 attrs:
     type: radio

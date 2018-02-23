@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typeFile
+
 attrs:
     type: file

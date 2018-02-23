@@ -1,5 +1,5 @@
 # <div> wrapping the input
-input:
+item:
     children:
         # <input> config
         input:

@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typeNumber
+
 attrs:
     type: number

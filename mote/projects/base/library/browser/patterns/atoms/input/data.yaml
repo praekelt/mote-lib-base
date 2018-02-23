@@ -1,3 +1,7 @@
 tag: input
+
+classes:
+    block: Input
+
 attrs:
     type: text

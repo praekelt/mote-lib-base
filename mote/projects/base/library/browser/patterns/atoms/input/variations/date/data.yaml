@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typeDate
+
 attrs:
     type: date

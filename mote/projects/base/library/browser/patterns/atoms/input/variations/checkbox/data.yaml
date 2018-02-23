@@ -1,2 +1,5 @@
+classes:
+    modifier: Input--typeCheckbox
+
 attrs:
     type: checkbox

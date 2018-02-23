@@ -1,5 +1,10 @@
+classes:
+    block: Field
+
 # <label> config
 label:
+    classes:
+        element: Field-label
     attrs:
         id: form-field-example-label
         for: form-field-example
@@ -7,9 +12,19 @@ label:
 # <div> wrapping the input
 item:
     tag: div
+    classes:
+        element: Field-item
     children:
         # <input> config
         input:
             id: self.browser.atoms.input
             attrs:
                 id: form-field-example
+
+hint:
+    classes:
+        element: Field-hintText
+
+message:
+    classes:
+        element: Field-messageText
