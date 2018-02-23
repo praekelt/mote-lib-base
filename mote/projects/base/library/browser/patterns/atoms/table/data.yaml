@@ -1,0 +1,6 @@
+classes:
+    block: Table
+row_classes:
+    element: Table-row
+col_classes:
+    element: Table-cell

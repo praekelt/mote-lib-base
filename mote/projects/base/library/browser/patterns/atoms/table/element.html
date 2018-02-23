@@ -1,0 +1,19 @@
+{% load mote_tags %}
+
+<table
+{% if classes %}class="{% for v in classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
+{% for k, v in attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+    {% for row in rows %}
+        <{% if row.tag %}{{ row.tag }}{% else %}tr{% endif %}{% if row.classes or row_classes %} class="{% for v in row_classes.values %}{{ v }}{% if not forloop.last %} {% endif %} {% endfor %}{% for v in row.classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
+        {% for k, v in row.attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+            {% for column in row.columns %}
+                <{% if column.tag %}{{ column.tag }}{% else %}td{% endif %}{% if column.classes or col_classes %} class="{% for v in col_classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %} {% for v in column.classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
+                {% for k, v in column.attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+                    {% if column.content %}
+                        {% render column.content %}
+                    {% endif %}
+                </{% if column.tag %}{{ column.tag }}{% else %}td{% endif %}>
+            {% endfor %}
+        </{% if row.tag %}{{ row.tag }}{% else %}tr{% endif %}>
+    {% endfor %}
+</table>
