@@ -1,0 +1,27 @@
+children:
+    -
+        id: self.browser.molecules.choice
+        children:
+            input:
+                attrs:
+                    name: choices-example-1
+                    id: choices-example-1
+                    aria-describedby: choices-example-1-label
+            indicator:
+                children:
+                    label:
+                        attrs:
+                            id: choices-example-1-label
+    -
+        id: self.browser.molecules.choice
+        children:
+            input:
+                attrs:
+                    name: choices-example-2
+                    id: choices-example-2
+                    aria-describedby: choices-example-2-label
+            indicator:
+                children:
+                    label:
+                        attrs:
+                            id: choices-example-2-label

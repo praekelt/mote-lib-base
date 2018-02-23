@@ -1,0 +1,5 @@
+children:
+    -
+        id: self.browser.atoms.button
+    -
+        id: self.browser.atoms.button

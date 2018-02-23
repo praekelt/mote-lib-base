@@ -1,8 +1,10 @@
 children:
+    legend:
+        value: FormGroup Title
     items:
         children:
             -
-                id: self.browser.molecules.field
+                id: self.browser.molecules.field.demo
                 label:
                     attrs:
                         id: formgroup-example-1-label
@@ -46,3 +48,16 @@ children:
                 message:
                     attrs:
                         id: formgroup-example-3-message
+            -
+                id: self.browser.molecules.field
+                label:
+                    attrs:
+                        id: formgroup-example-4-label
+                        for: formgroup-example-4
+                item:
+                    children:
+                        input:
+                            id: self.browser.organisms.choices.demo_with_items
+                            attrs:
+                                id: formgroup-example-4
+

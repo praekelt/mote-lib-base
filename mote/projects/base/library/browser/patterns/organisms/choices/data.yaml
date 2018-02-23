@@ -1,0 +1,10 @@
+tag: ul
+classes:
+    block: Choices
+
+wrapper:
+    tag: li
+    classes:
+        element: Choices-wrapper
+
+

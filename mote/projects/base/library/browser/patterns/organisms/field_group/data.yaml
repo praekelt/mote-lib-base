@@ -19,8 +19,3 @@ children:
             tag: div
             classes:
                 element: FieldGroup-field
-        #children:
-            #-
-                #id: self.browser.molecules.field
-            #-
-                #id: self.browser.molecules.field

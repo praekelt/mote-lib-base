@@ -5,7 +5,6 @@ label:
         for: form-field-example
     value: Field Label
 
-# <div> wrapping the input
 item:
     children:
         # <input> config
@@ -14,8 +13,3 @@ item:
             attrs:
                 id: form-field-example
                 aria-describedby: form-field-example-hint
-
-message:
-    attrs:
-        id: form-field-example-message
-    value: Validation message
