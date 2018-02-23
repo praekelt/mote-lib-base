@@ -1,6 +1,7 @@
 children:
     text:
         id: self.browser.atoms.text.paragraph
+        value: Anything can live inside of a form, even a paragraph.
     field:
         id: self.browser.molecules.field
     fieldgroup:
