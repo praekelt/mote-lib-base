@@ -1,0 +1,63 @@
+items:
+    -
+        group:
+            label: Foobar
+            options:
+                -
+                    value: foo
+                    text: foo
+                -
+                    value: baz
+                    text: baz
+    -
+        option:
+            value: test
+            text: test
+    -
+        option:
+            value: test2
+            text: test2
+    -
+        group:
+            label: Foobar
+            options:
+                -
+                    value: foo
+                    text: foo
+                -
+                    value: baz
+                    text: baz
+
+#options:
+    #-
+        #group:
+            #label: Foobar
+            #options:
+                #-
+                    #value: foo
+                    #text: foo
+                #-
+                    #value: baz
+                    #text: baz
+    #-
+        #value: bar
+        #text: bar
+    #-
+        #group:
+            #label: Foobar
+            #options:
+                #-
+                    #value: foo
+                    #text: foo
+                #-
+                    #value: baz
+                    #text: baz
+    #-
+        #value: bar
+        #text: bar
+    #-
+        #value: bar
+        #text: bar
+    #-
+        #value: bar
+        #text: bar

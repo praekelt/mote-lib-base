@@ -1,0 +1,16 @@
+{% load mote_tags %}
+
+<select {% if classes %}class="{% for v in classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
+{% for k, v in attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+    {% for item in items %}
+        {% if item.option %}
+            <option value="{{ item.option.value }}">{{ item.option.text }}</option>
+        {% elif item.group %}
+            <optgroup label="{{ item.group.label }}">
+                {% for optgroup_option in item.group.options %}
+                    <option value="{{ optgroup_option.value }}">{{ optgroup_option.text }}</option>
+                {% endfor %}
+            </optgroup>
+        {% endif %}
+    {% endfor %}
+</select>
