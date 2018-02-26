@@ -1,0 +1,23 @@
+sources:
+    - srcset:
+        attrs:
+            type: 'image/webp'
+            media: '(min-width: 500px) and (max-width: 1000px)'
+        images:
+            -
+                src: http://www.placehold.it/200x100
+                dimensions: 200w 100h
+            -
+                src: http://www.placehold.it/400x200
+                dimensions: 400w 200h
+    - srcset:
+        images:
+            -
+                src: http://www.placehold.it/200x100
+                dimensions: 200w 100h
+            -
+                src: http://www.placehold.it/400x200
+                dimensions: 400w 200h
+img:
+    attrs:
+        src: http://www.placehold.it/100x50
