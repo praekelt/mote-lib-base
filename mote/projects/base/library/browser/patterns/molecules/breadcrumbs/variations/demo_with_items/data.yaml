@@ -1,0 +1,10 @@
+children:
+    items:
+        children:
+            -
+                id: self.browser.atoms.text.anchor
+                value: Home
+            -
+                id: self.browser.atoms.text
+                value: Current
+

@@ -1,0 +1,19 @@
+tag: nav
+
+classes:
+    block: Breadcrumb
+
+attrs:
+    aria-label: breadcrumb
+
+children:
+    items:
+        id: self.browser.atoms.nested.list
+        tag: ol
+        classes:
+            element: Breadcrumb-items
+
+        wrapper:
+            tag: li
+            classes:
+                element: Breadcrumb-item
