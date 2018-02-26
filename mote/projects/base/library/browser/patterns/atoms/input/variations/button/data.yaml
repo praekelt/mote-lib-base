@@ -1,0 +1,5 @@
+classes:
+    modifier: Input--typeButton
+
+attrs:
+    type: button

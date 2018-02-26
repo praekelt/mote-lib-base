@@ -1,2 +1,4 @@
+classes:
+    block: Text
+
 tag: span
-# value: Text

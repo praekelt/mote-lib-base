@@ -1,0 +1,5 @@
+classes:
+    modifier: Input--typeRange
+
+attrs:
+    type: range

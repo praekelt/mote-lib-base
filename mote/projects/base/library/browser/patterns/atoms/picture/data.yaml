@@ -1,3 +1,6 @@
+classes:
+    block: Picture
+
 #sources:
     #- srcset:
         #attrs:
@@ -19,5 +22,5 @@
                 #src: foo@400.png
                 #dimensions: 400w 200h
 img:
-    #attrs:
-        #src: foo@200.png
+    attrs:
+        src: ''

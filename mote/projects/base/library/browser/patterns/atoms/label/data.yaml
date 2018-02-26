@@ -1,3 +1,8 @@
+classes:
+    block: Label
+
 tag: label
-#attrs:
-    #for: ''
+children:
+    text:
+        id: self.browser.atoms.string
+        value: Label

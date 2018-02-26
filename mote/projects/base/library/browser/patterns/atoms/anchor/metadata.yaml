@@ -1,2 +1,3 @@
-title: Anchor / Hyperlink
-description: This pattern should be used for inline hyperlinks.
+title: Anchor
+description: This pattern is deprecated. Please use "self.browser.atoms.text.anchor" instead.
+deprecated: true

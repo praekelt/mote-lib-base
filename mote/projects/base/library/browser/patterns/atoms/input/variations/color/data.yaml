@@ -1,0 +1,5 @@
+classes:
+    modifier: Input--typeColor
+
+attrs:
+    type: color

@@ -1,0 +1,5 @@
+classes:
+    modifier: Input--typeSubmit
+
+attrs:
+    type: submit

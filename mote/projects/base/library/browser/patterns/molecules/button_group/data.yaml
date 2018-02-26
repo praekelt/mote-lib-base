@@ -1,0 +1,8 @@
+tag: ul
+classes:
+    block: ButtonGroup
+
+wrapper:
+    tag: li
+    classes:
+        element: ButtonGroup-buttonWrapper

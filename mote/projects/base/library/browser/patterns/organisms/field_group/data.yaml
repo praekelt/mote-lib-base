@@ -1,0 +1,21 @@
+tag: fieldset
+
+classes:
+    block: FieldGroup
+
+children:
+    legend:
+        id: self.browser.atoms.text.legend
+        classes:
+            element: FieldGroup-title
+
+    items:
+        id: self.browser.atoms.nested.list
+        tag: div
+        classes:
+            element: FieldGroup-fields
+
+        wrapper:
+            tag: div
+            classes:
+                element: FieldGroup-field

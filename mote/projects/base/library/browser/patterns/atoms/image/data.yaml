@@ -1,2 +1,4 @@
+classes:
+    block: Image
 #attrs:
     #src: foo.png

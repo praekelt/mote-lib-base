@@ -1,0 +1,63 @@
+children:
+    legend:
+        value: FormGroup Title
+    items:
+        children:
+            -
+                id: self.browser.molecules.field.demo
+                label:
+                    attrs:
+                        id: formgroup-example-1-label
+                        for: formgroup-example-1
+                item:
+                    children:
+                        input:
+                            attrs:
+                                id: formgroup-example-1
+                                aria-labelledby: formgroup-example-1-label
+                                aria-describedby: formgroup-example-1-hint
+            -
+                id: self.browser.molecules.field.demo_with_hint
+                label:
+                    attrs:
+                        id: formgroup-example-2-label
+                        for: formgroup-example-2
+                item:
+                    children:
+                        input:
+                            attrs:
+                                id: formgroup-example-2
+                                aria-labelledby: formgroup-example-2-label
+                                aria-describedby: formgroup-example-2-hint
+                hint:
+                    attrs:
+                        id: formgroup-example-2-hint
+            -
+                id: self.browser.molecules.field.demo_with_message
+                label:
+                    attrs:
+                        id: formgroup-example-3-label
+                        for: formgroup-example-3
+                item:
+                    children:
+                        input:
+                            attrs:
+                                id: formgroup-example-3
+                                aria-labelledby: formgroup-example-3-label
+                                aria-describedby: formgroup-example-3-message
+                message:
+                    attrs:
+                        id: formgroup-example-3-message
+            -
+                id: self.browser.molecules.field
+                label:
+                    attrs:
+                        id: formgroup-example-4-label
+                        for: formgroup-example-4
+                item:
+                    children:
+                        input:
+                            id: self.browser.organisms.choices.demo_with_items
+                            attrs:
+                                id: formgroup-example-4
+

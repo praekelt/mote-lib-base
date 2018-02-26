@@ -1,0 +1,10 @@
+id: self.browser.atoms.nested
+tag: form
+
+classes:
+    block: Form
+
+attrs:
+    action: post
+
+

@@ -1,0 +1,24 @@
+tag: label
+classes:
+    block: Choice
+
+children:
+    input:
+        id: self.browser.atoms.input.checkbox
+        classes:
+            element: Choice-input
+        attrs:
+            aria-describedby: choice-label
+
+    indicator:
+        id: self.browser.atoms.nested
+        tag: span
+        classes:
+            element: Choice-indicator
+
+        children:
+            label:
+                id: self.browser.atoms.text
+                attrs:
+                    id: choice-label
+                value: Choice Text

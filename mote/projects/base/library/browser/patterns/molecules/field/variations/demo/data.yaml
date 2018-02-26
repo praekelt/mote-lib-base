@@ -1,0 +1,15 @@
+# <label> config
+label:
+    attrs:
+        id: form-field-example-label
+        for: form-field-example
+    value: Field Label
+
+item:
+    children:
+        # <input> config
+        input:
+            id: self.browser.atoms.input
+            attrs:
+                id: form-field-example
+                aria-describedby: form-field-example-hint

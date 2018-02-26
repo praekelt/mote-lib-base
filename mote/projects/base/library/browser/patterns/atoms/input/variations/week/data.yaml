@@ -1,0 +1,5 @@
+classes:
+    modifier: Input--typeWeek
+
+attrs:
+    type: week

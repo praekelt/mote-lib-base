@@ -1,0 +1,12 @@
+children:
+    text:
+        id: self.browser.atoms.text.paragraph
+        value: Anything can live inside of a form, even a paragraph.
+    field:
+        id: self.browser.molecules.field
+    fieldgroup:
+        id: self.browser.organisms.field_group.demo_with_items
+    actions:
+        id: self.browser.atoms.button
+        attrs:
+            role: submit

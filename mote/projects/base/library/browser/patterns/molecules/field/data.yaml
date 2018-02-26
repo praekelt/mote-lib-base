@@ -1,0 +1,21 @@
+classes:
+    block: Field
+
+# <label> config
+label:
+    classes:
+        element: Field-label
+
+# <div> wrapping the input
+item:
+    tag: div
+    classes:
+        element: Field-item
+
+hint:
+    classes:
+        element: Field-hintText
+
+message:
+    classes:
+        element: Field-messageText

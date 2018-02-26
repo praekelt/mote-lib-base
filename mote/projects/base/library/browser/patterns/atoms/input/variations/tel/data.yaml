@@ -1,0 +1,5 @@
+classes:
+    modifier: Input--typeTel
+
+attrs:
+    type: tel

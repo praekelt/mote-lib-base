@@ -1,4 +1,6 @@
 tag: button
+classes:
+    block: Button
 children:
     text:
         id: self.browser.atoms.string

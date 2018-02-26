@@ -1,0 +1,30 @@
+rows:
+    -
+        tag: thead
+        columns:
+            -
+                tag: th
+                classes:
+                    modifier:
+                        Table--heading
+                content:
+                    id: self.browser.atoms.text.bold
+                    value: Table Header 1
+            -
+                tag: th
+                classes:
+                    modifier:
+                        Table--heading
+                content:
+                    id: self.browser.atoms.text.bold
+                    value: Table Header 2
+    -
+        columns:
+            -
+                content:
+                    id: self.browser.atoms.string
+                    value: Table Cell
+            -
+                content:
+                    id: self.browser.atoms.string
+                    value: Table Cell

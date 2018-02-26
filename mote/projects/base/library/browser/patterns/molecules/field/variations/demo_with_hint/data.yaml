@@ -1,0 +1,22 @@
+# <label> config
+label:
+    attrs:
+        id: form-field-example-label
+        for: form-field-example
+    value: Field Label
+
+# <div> wrapping the input
+item:
+    children:
+        # <input> config
+        input:
+            id: self.browser.atoms.input
+            attrs:
+                id: form-field-example
+                aria-describedby: form-field-example-hint
+
+# hint text config
+hint:
+    attrs:
+        id: form-field-example-hint
+    value: Hint

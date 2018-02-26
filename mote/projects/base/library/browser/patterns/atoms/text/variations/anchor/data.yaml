@@ -1,0 +1,7 @@
+classes:
+    modifier: Text--typeAnchor
+
+attrs:
+    href: ''
+
+tag: a

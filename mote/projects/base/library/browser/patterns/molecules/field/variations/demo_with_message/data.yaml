@@ -1,0 +1,21 @@
+# <label> config
+label:
+    attrs:
+        id: form-field-example-label
+        for: form-field-example
+    value: Field Label
+
+# <div> wrapping the input
+item:
+    children:
+        # <input> config
+        input:
+            id: self.browser.atoms.input
+            attrs:
+                id: form-field-example
+                aria-describedby: form-field-example-hint
+
+message:
+    attrs:
+        id: form-field-example-message
+    value: Validation message
