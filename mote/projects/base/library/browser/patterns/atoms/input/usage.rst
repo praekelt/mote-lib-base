@@ -1,23 +1,31 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.atoms.input
+- **Variations**: .button, .checkbox, .color, .date, .datetime, .email, .file, .number, .password, .radio, .range, .reset, .search, .submit, .tel, .time, .url, .week
+- **Uses:**: self.browser.atoms.inline
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Atom
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
-
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+    # Uses self.browser.atoms.inline, thus we provide the default tag value.
+    tag: input
+
+    # Default class. Additional classes may be provided as desired.
+    classes:
+        block: Input
+
+    # Each variation will provide a default value for type. Default is 'text'.
+    # Additional attributes, such as required may be added as such: 'required: required'
+    attrs:
+        type: text # Any valid HTML Input type value. This is abstracted away in the variations.
 
 ----
 
 Usage
 =====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+Basic form input. Make use of variations to get a specific input type, or override the type attr manually.
