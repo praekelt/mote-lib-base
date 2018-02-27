@@ -1,0 +1,13 @@
+tag: a
+
+classes:
+    block: MenuButton
+
+attrs:
+    href: ''
+    role: menuitem
+
+children:
+    text:
+        id: self.browser.atoms.string
+        value: I'm a menu item

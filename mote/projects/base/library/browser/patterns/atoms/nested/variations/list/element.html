@@ -1,8 +1,10 @@
 {% load mote_tags %}
 
+{% if tag %}
 <{{tag}}
 {% if classes %}class="{% for v in classes.values %}{{ v }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}
 {% for k, v in attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
+{% endif %}
     {% for child in children %}
         {% if wrapper %}
             <{{ wrapper.tag }} {% if wrapper.classes %}class="{% for class in wrapper.classes.values %}{{ class }} {% endfor %}"{% endif %}>
@@ -12,4 +14,6 @@
             </{{ wrapper.tag }}>
         {% endif %}
     {% endfor %}
+{% if tag %}
 </{{tag}}>
+{% endif %}

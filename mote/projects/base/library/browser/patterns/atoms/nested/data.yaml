@@ -1,4 +1,3 @@
-tag: tag
 children:
     child:
         id: self.browser.atoms.null

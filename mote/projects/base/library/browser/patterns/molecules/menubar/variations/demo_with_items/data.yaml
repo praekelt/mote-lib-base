@@ -1,0 +1,15 @@
+children:
+    items:
+        children:
+            -
+                id: self.browser.atoms.menubutton
+                children:
+                    text:
+                        value: Lorem
+            -
+                id: self.browser.atoms.menubutton
+                value: Current
+                children:
+                    text:
+                        value: Ipsum
+

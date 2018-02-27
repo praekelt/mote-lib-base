@@ -1,0 +1,21 @@
+tag: nav
+
+classes:
+    block: MenuBar
+
+attrs:
+    aria-label: breadcrumb
+
+children:
+    items:
+        id: self.browser.atoms.nested.list
+        tag: ul
+        classes:
+            element: MenuBar-items
+        attrs:
+            role: menubar
+
+        wrapper:
+            tag: li
+            classes:
+                element: MenuBar-item
