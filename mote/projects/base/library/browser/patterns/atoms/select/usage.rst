@@ -1,23 +1,58 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.atoms.select
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Atom
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
 
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+    # Default class. Additional classes can be added as desired.
+    classes:
+        block: Select
+
+    # Optional. If you need a multi-select, supply the property as below.
+    # Alternatively, use self.browser.atoms.select.multiple
+    attrs:
+        multiple: multiple
+
+    # The options should be configured as below.
+    items:
+        -
+            option:
+                text: foo
+                attrs:
+                    value: foo
+                    disabled: disabled
+                    selected: selected
+
+        -
+            # <optgroup> is supported, and you can mix options and optgroups as desired.
+            group:
+                attrs:
+                    label: foo
+                    disabled: disabled
+                options:
+                    -
+                        text: foo
+                        attrs:
+                            value: foo
+                            disabled: disabled
+                            selected: selected
 
 ----
 
 Usage
 =====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+This pattern returns a select with options and optgroups with options, as desired.
+
+If you need a multiselect, make use of ``self.browser.atoms.select.multiple`` or supply the ``attr``
+directly as ``attrs.multiple``.
+
+Options make use of ``attrs`` and ``text`` values. If no ``text`` value is specified, you may instead pass it ``option.attrs.label`` as per the HTML5 spec.
+
+Optgroups allow you to group options in a select under a single heading. This heading may be supplied as ``group.attrs.label``. Another valid attribute is ``disabled``, which is also demonstrated in the example data above.

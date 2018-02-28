@@ -4,11 +4,11 @@
 {% for k, v in attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
     {% for item in items %}
         {% if item.option %}
-            <option value="{{ item.option.value }}">{{ item.option.text }}</option>
+            <option{% for k, v in item.option.attrs.items %} {{ k }}="{{ v }}"{% endfor %}>{{ item.option.text }}</option>
         {% elif item.group %}
-            <optgroup label="{{ item.group.label }}">
+            <optgroup{% for k, v in item.group.attrs.items %} {{ k }}="{{ v }}"{% endfor %}>
                 {% for optgroup_option in item.group.options %}
-                    <option value="{{ optgroup_option.value }}">{{ optgroup_option.text }}</option>
+                    <option{% for k, v in optgroup_option.attrs.items %} {{ k }}="{{ v }}"{% endfor %}>{{ optgroup_option.text }}</option>
                 {% endfor %}
             </optgroup>
         {% endif %}
