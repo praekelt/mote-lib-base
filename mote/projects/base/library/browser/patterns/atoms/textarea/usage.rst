@@ -1,23 +1,29 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.atoms.textarea
+- **Uses:** self.browser.atoms.nested
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Atom
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
-
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+    # Default class.
+    classes:
+        block: TextArea
 
-----
+    # HTML Attributes may be added as follows:
+    attrs:
+        disabled: disabled
+        readonly: readonly
+        data-foo: foo
 
-Usage
-=====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+    # How to add a default text value:
+    children:
+        text:
+            id: self.browser.atoms.string
+            value: This is how you provide default content to the textarea.
+

@@ -1,23 +1,34 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.atoms.text
+- **Variations:** .anchor, .blockquote, .bold, .data, .emphasis, .heading1/2/3/4/5/6, .italic, .label, .legend, .mark, .paragraph, .small, .strong, .time
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Atom
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
-
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+    # All text atoms will have this default class.
+    classes:
+        block: Text
+
+    # Variations/Optional
+    # Every defined variation has a modifier class baked into it
+    # in order to make it easier to style individually.
+    # The format is as follows:
+    classes:
+        modifier: Text--type...
+
+    # The text value may be provided as follows:
+    value: foo
 
 ----
 
 Usage
 =====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+This pattern may be used for any HTML text element, which consists of just a tag wrapping a plaintext string.
+
+Some sensible defaults have been provided as variations, and may be called as ``self.browser.atoms.text.[name]``
