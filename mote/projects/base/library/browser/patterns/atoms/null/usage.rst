@@ -1,23 +1,21 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.atoms.null
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Atom / Meta Pattern
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
 
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+  N/A
 
 ----
 
 Usage
 =====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+This pattern returns nothing. As odd as that may seem, it's quite useful when building patterns
+which need an empty slot which can be rendered to.
