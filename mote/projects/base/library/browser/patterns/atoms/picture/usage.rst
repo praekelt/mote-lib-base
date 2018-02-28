@@ -1,23 +1,59 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.atoms.picture
+- **Uses:** self.browser.atoms.image
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Atom
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
-
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+    # Default class. Additional classes may be added as desired.
+    classes:
+        block: Picture
+
+    # Any HTML attribute can be passed in as a key/value pair as shown below.
+    # Emits foo="bar" on the element.
+    attrs:
+        foo: bar
+
+    # As per responsive image spec, <picture> can have multiple instances of <source>
+    sources:
+        # Each source.srcset can have multiple images, and can have attrs applied.
+        - srcset:
+            attrs:
+                type: 'image/webp'
+                media: '(min-width: 500px) and (max-width: 1000px)'
+            images:
+                -
+                    src: foo@200.webp
+                    dimensions: 200w 100h
+                -
+                    src: foo@400.webp
+                    dimensions: 400w 200h
+        - srcset:
+            images:
+                -
+                    src: foo@200.png
+                    dimensions: 200w 100h
+                -
+                    src: foo@400.png
+                    dimensions: 400w 200h
+
+    # Uses self.browser.atoms.image.
+    # Empty src applied by default. Override with img.attrs.src
+    img:
+        attrs:
+            src: ''
 
 ----
 
 Usage
 =====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+The picture tag forms part of the responsive image spec, and works in a similar fashion to
+HTML5 video.
+
+Multiple ``<sources>`` may be supplied, each of which can have its own ``srcset`` and other valid HTML attributes.
