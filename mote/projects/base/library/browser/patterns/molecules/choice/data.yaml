@@ -11,13 +11,13 @@ children:
             aria-describedby: choice-label
 
     indicator:
-        id: self.browser.atoms.nested
+        id: self.browser.atoms.nested.list
         tag: span
         classes:
             element: Choice-indicator
 
         children:
-            label:
+            -
                 id: self.browser.atoms.text
                 attrs:
                     id: choice-label

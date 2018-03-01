@@ -1,4 +1,7 @@
+id: self.browser.atoms.nested.list
+
 tag: ul
+
 classes:
     block: ButtonGroup
 

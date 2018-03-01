@@ -1,23 +1,46 @@
 Info
 ====
-High-level info for the pattern should go here.
-
-This includes parent library name, how to reference it ``self.browser.x``, and a list of variations and how to reference them.
+- **Reference:** self.browser.molecules.button_group
+- **Uses:**: self.browser.atoms.nested.list
+- **Parent Library:** mote-lib-base
+- **Pattern Type:** Molecule
 
 ----
 
 Data Spec
 =========
-The data this pattern expects should be documented here as commented YAML.
-One should be able to copy and paste this example and play with it.
-
 .. code-block:: yaml
 
-    foo: bar # Explanation of this value
+    # By default, this pattern uses self.browser.atoms.nested.list
+    # but this can be overridden if desired.
+    id: self.browser.atoms.nested.list
 
-----
+    # Default parent tag.
+    tag: ul
 
-Usage
-=====
-This should describe the pattern's function and usage in human terms. Not all patterns are self-explanatory,
-and this is where additional information and instructions can be documented.
+    # Default class on parent.
+    classes:
+        block: ButtonGroup
+
+    # Default config for the <li> wrapping each button.
+    wrapper:
+        tag: li
+        classes:
+            element: ButtonGroup-buttonWrapper
+
+        # Optionally, you may pass the <li> tags attributes
+        # which all of them will receive.
+        attrs:
+            foo: bar
+
+    # Children must be passed in as a list.
+    # Due to the generic nature of this pattern,
+    # you will need to specify the `id` of the
+    # desired child pattern you wish to render.
+    # This allows you to have custom button patterns
+    # which can still be used with button_group.
+    children:
+        -
+            id: self.browser.atoms.button
+        -
+            id: self.browser.atoms.button
