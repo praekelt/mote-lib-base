@@ -6,11 +6,11 @@
 {% for k, v in attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
 {% endif %}
     {% for child in children %}
-        {% if wrapper %}
+        {% if wrapper and not child.id == "self.browser.atoms.null" %}
             <{{ wrapper.tag }} {% if wrapper.classes %}class="{% for class in wrapper.classes.values %}{{ class }} {% endfor %}"{% endif %}>
         {% endif %}
                 {% render child %}
-        {% if wrapper %}
+        {% if wrapper and not child.id == "self.browser.atoms.null" %}
             </{{ wrapper.tag }}>
         {% endif %}
     {% endfor %}
