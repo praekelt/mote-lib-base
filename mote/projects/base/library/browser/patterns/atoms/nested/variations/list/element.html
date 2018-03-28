@@ -7,7 +7,7 @@
 {% endif %}
     {% for child in children %}
         {% if wrapper and not child.id == "self.browser.atoms.null" %}
-            <{{ wrapper.tag }} {% if wrapper.classes %}class="{% for class in wrapper.classes.values %}{{ class }} {% endfor %}"{% endif %}>
+        <{{ wrapper.tag }} {% if wrapper.classes %}class="{% for class in wrapper.classes.values %}{{ class }}{% if not forloop.last %} {% endif %}{% endfor %}"{% endif %}{% for k, v in wrapper.attrs.items %} {{ k }}="{{ v }}"{% if not forloop.last %} {% endif %}{% endfor %}>
         {% endif %}
                 {% render child %}
         {% if wrapper and not child.id == "self.browser.atoms.null" %}
