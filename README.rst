@@ -15,3 +15,20 @@ metadata.yaml file:
         - base
         - myproject
 
+Usage
+=====
+``mote-lib-base`` does not have a dependency on Django but it is possible to
+add it to a Django project. Doing so makes the patterns discoverable with zero
+configuration:
+
+.. code-block:: python
+
+    INSTALLED_APPS = [
+        ...
+        "motelibbase",
+        ...
+    ]
+
+Alternatively Mote can be configured to point to a directory containing the
+patterns. See the Mote documentation for instructions.
+
